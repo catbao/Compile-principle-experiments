@@ -1,0 +1,34 @@
+非终结符：
+S T V 
+终结符：
+a ^ ( ) , 
+产生式:
+0：S -> a 
+1：S -> ^
+2：S -> ( T )
+3：T -> S V
+4：V -> , S V
+5：V -> @
+开始符号:
+S
+
+First Set:
+First(S):( ^ a 
+First(T):( ^ a 
+First(V):, @ 
+
+
+Follow Set
+Follow(S):# ) , 
+Follow(T):) 
+Follow(V):) 
+
+Select Set:
+SELECT(S->a): a
+SELECT(S->^): ^
+SELECT(S->(T)): (
+SELECT(T->SV):  ( ^ a
+SELECT(V->,SV): ,
+SELECT(V->@):  )
+
+请按任意键继续. . . 
